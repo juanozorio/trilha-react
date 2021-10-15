@@ -7,14 +7,7 @@ interface Repository {
     name: string;
     description: string;
     html_url: string;
-
-}
-
-const repository = {
-    name: 'unform',
-    description: 'Forms in React',
-    link: 'https://github.com/juanozorio'
-}
+};
 
 export function RepositoryList() {
     const [repositories, setRepositories] = useState<Repository[]>([])
@@ -32,7 +25,7 @@ export function RepositoryList() {
             <h1>Lista de repositórios</h1>
                 <ul>
                     {repositories.map(repository => {
-                        return<RepositoryItem key={repository.name} repository={repository}/>
+                        return <RepositoryItem key={repository.name} repository={repository} />
                     })}
 
             </ul>
